@@ -27,11 +27,7 @@ Servo myservo;  // create servo object to control a servo
 void setup() {
   // Serial.begin(115200);   // remove comment from this line if you change the Serial port in the next line
 
-#if defined(ARDUINO_ARCH_MBED)
-  IBus.begin(Serial, IBUSBM_NOTIMER);
-#else
   IBus.begin(Serial);    // iBUS connected to Serial0 - change to Serial1 or Serial2 port when required
-#endif
 
   myservo.attach(9);  // attaches the servo on pin 9 to the servo object
 
